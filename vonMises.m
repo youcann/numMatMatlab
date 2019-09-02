@@ -22,6 +22,7 @@ for k=2:N
    x(:,k)  = z(:,k) / z_ik(k);
 end
 
+%Errechneter, betragsgrößter Eigenwert
 z_ik(N)
 %x(:,N)./V(:,1)
 %x(:,N)./V(:,2)
