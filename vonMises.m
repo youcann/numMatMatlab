@@ -19,12 +19,14 @@ x(:,1)=[0.15; 1; 0.25];
 for k=2:N
    z(:,k)  = A * x(:,k-1);
    z_ik(k) = max(abs(z(:,k)));
-   x(:,k)  = z(:,k) .* z_ik(k);
+   x(:,k)  = z(:,k) / z_ik(k);
 end
 
-x(:,N)./V(:,1)
-x(:,N)./V(:,2)
-x(:,N)./V(:,3)
+%Errechneter, betragsgrößter Eigenwert
+z_ik(N)
+%x(:,N)./V(:,1)
+%x(:,N)./V(:,2)
+%x(:,N)./V(:,3)
 
 
 
